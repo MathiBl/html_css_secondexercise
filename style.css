@@ -1,0 +1,14 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form_body {
+    display: flex;
+    flex-direction: row;
+}
+
+.form_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

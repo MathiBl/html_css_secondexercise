@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailchimp sign-up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form_body">
+        
+    <img src="logo_mailchimp.png" alt="logo_mailchimp">
+    <div class="form_text"></div>
+    <h1>Welcome to Mailchimp</h1>
+    <p>Find your people. Engage your customers. Build your brand. Do it all with Mailchimp´s Marketing Platform. Already have an account? <a href="">Log in</a></p>
+
+    <form action="">
+        <label for="Email">Email</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+     
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            name="username"
+            required
+          >
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+            required
+          >
+
+          <div class="button">
+            <button type="submit" onclick="checkForm()" value="Enviar">Sign Up</button>         
+            <input
+            type="checkbox"
+            id="privacidad"
+            name="privacidad"
+            required
+          />
+          <p>I don´t want to receive emails about new Mailchimp products, best practice, or special offers.</p>  
+        </div>
+
+
+    </form>
+
+    <div class="agreement">
+        <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp´s <a href="">Terme of Use</a> and <a href="">Privacy Policy</a>.
+        </p>
+    </div>
+    </div>
+</div>
+
+    
+</body>
+</html>

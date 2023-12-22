@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mailchimp sign-up form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="form_body">
-        
-    <img src="logo_mailchimp.png" alt="logo_mailchimp">
-    <div class="form_text"></div>
-    <h1>Welcome to Mailchimp</h1>
-    <p>Find your people. Engage your customers. Build your brand. Do it all with Mailchimp´s Marketing Platform. Already have an account? <a href="">Log in</a></p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <img src="logo_mailchimp.png" alt="logo_mailchimp" />
+      <div class="form_text">
+        <h1>Welcome to Mailchimp</h1>
+        <p class="intro">
+          Find your people. Engage your customers. Build your brand. Do it all
+          with Mailchimp´s Marketing Platform. Already have an account?
+          <a class="login" href="">Log in</a>
+        </p>
 
-    <form action="">
-        <label for="Email">Email</label>
-        <input
+        <form action="form_body">
+            <div class="email">
+          <label for="Email">Email</label>
+          <input
             type="email"
             id="email"
-            placeholder="Email"
+            placeholder=""
             name="email"
             required
           />
-     
+        </div>
+          
+        <div class="username">
           <label for="username">Username</label>
           <input
             type="text"
             id="username"
-            placeholder="Username"
+            placeholder=""
             name="username"
             required
-          >
+          />
+        </div>
 
+        <div class="password">
           <label for="password">Password</label>
           <input
             type="password"
             id="password"
-            placeholder="Password"
+            placeholder=""
             name="password"
-            required
-          >
-
-          <div class="button">
-            <button type="submit" onclick="checkForm()" value="Enviar">Sign Up</button>         
-            <input
-            type="checkbox"
-            id="privacidad"
-            name="privacidad"
+            minlength="8"
+            size="8"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+            title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
             required
           />
-          <p>I don´t want to receive emails about new Mailchimp products, best practice, or special offers.</p>  
+          <div class="password_rules">
+            <ul>
+              <li>One lowercase character</li>
+              <li>One uppercase character</li>
+              <li>One number</li>
+              <li>One special character</li>
+              <li>8 characters minimum</li>
+            </ul>
+
+          </div>
         </div>
 
+          <div class="button">
+            <button class="signup" type="submit" onclick="checkForm()" value="Enviar">
+              Sign Up
+            </button>
+            <input class="checkbox" type="checkbox" id="privacidad" name="privacidad" required />
+            <p class="marketing">
+              I don´t want to receive emails about new Mailchimp products, best
+              practice, or special offers.
+            </p>
+          </div>
+        </form>
 
-    </form>
-
-    <div class="agreement">
-        <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp´s <a href="">Terme of Use</a> and <a href="">Privacy Policy</a>.
-        </p>
+        <div class="agreement">
+          <p>
+            By clicking the "Sign Up" button, you are creating a Mailchimp
+            account, and you agree to Mailchimp´s
+            <a href="">Terme of Use</a> and <a href="">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
     </div>
-    </div>
-</div>
-
-    
-</body>
+  </body>
 </html>
